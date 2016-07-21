@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F573282F1D23C43A00B53CBB /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573282E1D23C43A00B53CBB /* CalculatorBrain.swift */; };
 		F5A2CCF71D13EA0400F60A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2CCF61D13EA0400F60A5E /* AppDelegate.swift */; };
 		F5A2CCF91D13EA0400F60A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2CCF81D13EA0400F60A5E /* ViewController.swift */; };
 		F5A2CCFC1D13EA0400F60A5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A2CCFA1D13EA0400F60A5E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F573282E1D23C43A00B53CBB /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		F5A2CCF31D13EA0400F60A5E /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A2CCF61D13EA0400F60A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A2CCF81D13EA0400F60A5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +99,10 @@
 		F5A2CCF51D13EA0400F60A5E /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				F5A2CCF61D13EA0400F60A5E /* AppDelegate.swift */,
 				F5A2CCF81D13EA0400F60A5E /* ViewController.swift */,
+				F573282E1D23C43A00B53CBB /* CalculatorBrain.swift */,
 				F5A2CCFA1D13EA0400F60A5E /* Main.storyboard */,
-				F5A2CCFD1D13EA0400F60A5E /* Assets.xcassets */,
-				F5A2CCFF1D13EA0400F60A5E /* LaunchScreen.storyboard */,
-				F5A2CD021D13EA0400F60A5E /* Info.plist */,
+				F5A2CD241D13EF0500F60A5E /* Supporting Files */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -125,6 +125,17 @@
 			path = CalculatorUITests;
 			sourceTree = "<group>";
 		};
+		F5A2CD241D13EF0500F60A5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5A2CCF61D13EA0400F60A5E /* AppDelegate.swift */,
+				F5A2CCFD1D13EA0400F60A5E /* Assets.xcassets */,
+				F5A2CCFF1D13EA0400F60A5E /* LaunchScreen.storyboard */,
+				F5A2CD021D13EA0400F60A5E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +146,7 @@
 				F5A2CCEF1D13EA0400F60A5E /* Sources */,
 				F5A2CCF01D13EA0400F60A5E /* Frameworks */,
 				F5A2CCF11D13EA0400F60A5E /* Resources */,
+				F5A2CD251D14003700F60A5E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -251,11 +263,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F5A2CD251D14003700F60A5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5A2CCEF1D13EA0400F60A5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F573282F1D23C43A00B53CBB /* CalculatorBrain.swift in Sources */,
 				F5A2CCF91D13EA0400F60A5E /* ViewController.swift in Sources */,
 				F5A2CCF71D13EA0400F60A5E /* AppDelegate.swift in Sources */,
 			);
@@ -482,6 +511,7 @@
 				F5A2CD1D1D13EA0400F60A5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5A2CD1E1D13EA0400F60A5E /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +520,7 @@
 				F5A2CD201D13EA0400F60A5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5A2CD211D13EA0400F60A5E /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +529,7 @@
 				F5A2CD231D13EA0400F60A5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
